@@ -1,0 +1,97 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.5s ease;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #444;
+}
+
+/* Mood Container */
+.mood-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.mood-btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Mood Colors */
+.mood-btn[data-mood="happy"] { background: #ffd166; color: #333; }
+.mood-btn[data-mood="sad"] { background: #a2d2ff; color: #333; }
+.mood-btn[data-mood="excited"] { background: #ffb703; color: #333; }
+.mood-btn[data-mood="calm"] { background: #bde0fe; color: #333; }
+
+.mood-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Mood History */
+#mood-history {
+    margin-top: 30px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#mood-history h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+}
+
+#history-list li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mood-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mood-btn {
+        width: 80%;
+    }
+}
