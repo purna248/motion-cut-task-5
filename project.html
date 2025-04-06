@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link rel="stylesheet" href="project5.css">
+</head>
+<body>
+
+<header>
+    <h1>Daily Mood Tracker</h1>
+</header>
+
+<main>
+    <div class="mood-container">
+        <button class="mood-btn" onclick="selectMood('happy')" data-mood="happy">😊 Happy</button>
+        <button class="mood-btn" onclick="selectMood('sad')" data-mood="sad">😢 Sad</button>
+        <button class="mood-btn" onclick="selectMood('excited')" data-mood="excited">🤩 Excited</button>
+        <button class="mood-btn" onclick="selectMood('calm')" data-mood="calm">😌 Calm</button>
+    </div>
+
+    <div id="mood-history">
+        <h2>Mood History</h2>
+        <ul id="history-list"></ul>
+    </div>
+</main>
+
+<script src="project5.js"></script>
+
+</body>
+</html>
